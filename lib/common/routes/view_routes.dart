@@ -3,11 +3,14 @@ import 'package:login_with_sqllite/model/user_model.dart';
 import 'package:login_with_sqllite/screen/login_form.dart';
 import 'package:login_with_sqllite/screen/signup_form.dart';
 import 'package:login_with_sqllite/screen/update_form.dart';
+import 'package:login_with_sqllite/screen/principal.dart';
+import 'package:path/path.dart';
 
 class RoutesApp {
   static const home = '/';
   static const loginSgnup = '/loginSignup';
   static const loginUpdate = '/loginUpdate';
+  static const telaPrincipal = '/telaPrincipal';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final arguments = settings.arguments;
@@ -17,6 +20,9 @@ class RoutesApp {
 
       case loginSgnup:
         return MaterialPageRoute(builder: (context) => const SignUp());
+
+      case telaPrincipal:
+        return MaterialPageRoute(builder: (_) => CatImagesScreen());
 
       case loginUpdate:
         if (arguments is UserModel) {

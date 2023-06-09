@@ -17,6 +17,7 @@ class _LoginFormState extends State<LoginForm> {
   final _userLoginController = TextEditingController();
   final _userPasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  bool showPassword = false;
 
   @override
   void dispose() {
@@ -77,7 +78,7 @@ class _LoginFormState extends State<LoginForm> {
                             } else {
                               Navigator.pushNamed(
                                 context,
-                                RoutesApp.loginUpdate,
+                                RoutesApp.telaPrincipal,
                                 arguments: user,
                               );
                             }
